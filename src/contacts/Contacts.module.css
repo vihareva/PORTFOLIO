@@ -1,0 +1,52 @@
+.contactsBlock{
+    height: 100vh;
+    background-color: mediumpurple;
+}
+.contactsContainer{
+    background-color: #97d757;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.title{
+    background-color: #72d4d4;
+}
+
+.formBlock{
+    margin: 15px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    background-color: #efaa61;
+}
+.form{
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+
+}
+/*.inputs {*/
+/*    background-color: #e060c4;*/
+/*    width: 100%;*/
+/*    border: 1px solid rgba(0,0,0,.1);*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.inputs input{*/
+/*    height: 44px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*.messageTextarea textarea {*/
+/*    width: 100%;*/
+/*    border: 1px solid rgba(0,0,0,.1);*/
+/*    height: 44px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*.button input{*/
+/*    width: 100%;*/
+/*    height: 44px;*/
+/*}*/

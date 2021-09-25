@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #7b99e5;
+}
+.footerContainer{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social{
+    background-color: #e060c4;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 250px;
+}
+
