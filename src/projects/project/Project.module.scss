@@ -1,0 +1,79 @@
+@import '../../common/styles/sass/variables.module';
+@import '../../common/styles/sass/mixins';
+.project {
+  width: 325px;
+  min-height: 422px;
+  background-color: $blockItemColor;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  /* margin-top: 50px; */
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 3px;
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7f19ce;
+    height: 213px;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+
+    .button {
+      border-radius: 6px;
+      background: linear-gradient(
+                      145deg, #1e2024, #23272b);
+      padding: 5px 25px;
+      list-style: none;
+      text-decoration: none;
+      color: $titleColor;
+      position: relative;
+      z-index: 1;
+      .textLink {
+        font-family: 'Poppins', sans-serif;
+      }
+      &:hover, &:focus {
+        cursor: pointer;
+        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      background-color: $titleColor;
+      width: 100%;
+      height: 6px;
+      bottom: 0;
+    }
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.5;
+    }
+  }
+  .projectInfo {
+    padding: 20px 25px 25px;
+    .projectName {
+      margin-bottom: 12px;
+      @include text(('Poppins', sans-serif),$miniTitleTextColor,20px,500,1.1666666667);
+    }
+    .description {
+      /*margin: 0px 0px 0px 10px;*/
+      @include text(('Poppins',sans-serif), $miniTitleTextColor, 1rem,300,1.75);
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

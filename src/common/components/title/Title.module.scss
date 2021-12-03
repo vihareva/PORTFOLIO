@@ -1,0 +1,48 @@
+@import '../../../common/styles/sass/mixins';
+@import '../../../common/styles/sass/variables.module';
+
+.miniTitle{
+  @include text(('Poppins',sans-serif),$miniTitleTextColor,18px,500);
+  margin-bottom: 16px;
+  margin-top:50px;
+  position: relative;
+  &:before{
+    background-image: linear-gradient(
+                    90deg, white 0%, white 100%), linear-gradient(
+                    90deg, white 0%, white 100%), radial-gradient(ellipse at center, #ffc514 0%, #ffc514 50%, rgba(255, 197, 20, 0) 50%, rgba(255, 197, 20, 0) 100%);
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -55px;
+    box-sizing: border-box;
+    background-size: 20px 2px, 7px 2px, 7px 7px;
+    background-position: 0 50%, 27px 50%, 43px 50%;
+    width: 51px;
+  }
+  &:after{
+    background-image: linear-gradient(
+                    90deg, white 0%, white 100%), linear-gradient(
+                    90deg, white 0%, white 100%), radial-gradient(ellipse at center, #ffc514 0%, #ffc514 50%, rgba(255, 197, 20, 0) 50%, rgba(255, 197, 20, 0) 100%);
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -55px;
+    box-sizing: border-box;
+    background-size: 20px 2px, 7px 2px, 7px 7px;
+    background-position: 0 50%, 27px 50%, 43px 50%;
+    width: 51px;
+    transform: rotate(180deg);
+  }
+}
+
+.title{
+  margin: 0 0 20px;
+  @include text(('Poppins',sans-serif),$titleColor,1.875rem,700,1.2);
+  /*display: inline-block;*/
+  /*vertical-align: top;*/
+  /*text-align: center;*/
+}
