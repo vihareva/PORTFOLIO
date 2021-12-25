@@ -1,0 +1,47 @@
+.skillsBlock{
+    min-height: 100vh;
+    /*background-color: #6fef61;*/
+    position: relative;
+    //padding: 140px 0 150px 0;
+    padding-bottom: 65px;
+    &:before {
+        background-image: url('https://kura-vue.vercel.app/img/white-texture.9d0cd07e.png');
+        background-repeat: repeat;
+        opacity: .6;
+        z-index: 2;
+    }
+    &:after {
+        background-color: #000;
+        z-index: 1;
+    }
+    &:after, &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .skillsContainer{
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        z-index: 3;
+        .skills{
+            border: 1px solid;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            @media screen and (max-width: 1103px) {
+                justify-content: space-evenly;
+            }
+        }
+    }
+    @media screen and (max-width: 1332px) {
+        min-height: 70vh;
+    }
+}
+

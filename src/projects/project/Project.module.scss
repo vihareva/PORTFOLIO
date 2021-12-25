@@ -7,11 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
   /* margin-top: 50px; */
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 3px;
+  @media screen and (max-width: 1224px){
+    margin-bottom: 60px;
+    min-height: 300px;
+  }
   .imgContainer {
     display: flex;
     justify-content: center;

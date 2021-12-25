@@ -1,0 +1,52 @@
+@import '../common/styles/sass/mixins';
+@import '../common/styles/sass/variables.module';
+
+.footer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #111111;
+  .footerContainer{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text{
+      margin-left:15px;
+      @include text(('Poppins',sans-serif), #373737, 14px,500,1.7142857143);
+    }
+    .social{
+      margin: 15px;
+      display: flex;
+      justify-content: space-between;
+      height: 30px;
+      width: 200px;
+      .link{
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 100%;
+      border: 1px solid #fff;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+        &:hover, &:focus{
+          background-color: #ffc514;
+          border-color: #ffc514;
+          color: #fff;
+        }
+    }
+
+    }
+  }
+}
+
+
+
+
+
+
+

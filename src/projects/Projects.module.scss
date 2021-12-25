@@ -3,13 +3,15 @@
 
 .projectsBlock {
   min-height: 100vh;
-  background-color: $blockBgColor;
+  background-color: #111111;
+  padding-bottom: 65px;
   .projectsContainer {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     .projects {
       border: 1px solid;
+      margin-top: 50px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -19,6 +21,10 @@
       }
     }
   }
+  @media screen and (max-width: 1332px) {
+    min-height: 70vh;
+  }
+
 }
 
 //

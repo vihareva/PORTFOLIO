@@ -4,7 +4,7 @@
 .miniTitle{
   @include text(('Poppins',sans-serif),$miniTitleTextColor,18px,500);
   margin-bottom: 16px;
-  margin-top:50px;
+  margin-top:65px;
   position: relative;
   &:before{
     background-image: linear-gradient(

@@ -1,0 +1,62 @@
+@import '../common/styles/sass/variables.module';
+@import '../common/styles/sass/mixins';
+.divContainer{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.inputContainer{
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  /*padding:0 15px 0;*/
+  @include text(('Poppins',sans-serif), $miniTitleTextColor,1rem,300,1.75);
+  //color: #cfcfcf;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+.input{
+  @include text(('Poppins',sans-serif), $miniTitleTextColor,1rem,400,1.5);
+  border-width: 0 0 1px;
+  border-color: $miniTitleTextColor;
+  width: 100%;
+  display: block;
+  height: 46px;
+  /*padding: 0.6875rem 0;*/
+  //color: #fff;
+  background-color: transparent;
+  background-clip: padding-box;
+  border-radius: 0;
+  margin: 0;
+}
+.input:hover, .input:focus{
+  border-color: $titleColor;
+  outline: none;
+}
+.input:focus+label{
+  color: $titleColor;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  top: -15px;
+}
+.editedInput+label{
+  color: $miniTitleTextColor;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  top: -15px;
+}
+.error{
+  border-color: red;
+}
+.label{
+  @include text(('Poppins',sans-serif), $miniTitleTextColor,1rem,400,1.75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0 ;
+  position: absolute;
+  text-align: left;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
