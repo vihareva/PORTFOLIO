@@ -1,0 +1,158 @@
+@import '../common/styles/sass/mixins';
+@import '../common/styles/sass/variables.module';
+
+.mainBlock {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:before {
+    background-image: url('https://kura-vue.vercel.app/img/white-texture.9d0cd07e.png');
+    background-repeat: repeat;
+    opacity: .6;
+    z-index: 2;
+  }
+
+  &:after {
+    background-color: #000;
+    z-index: 1;
+  }
+
+  &:after, &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  @media screen and (max-width: 1332px) {
+    min-height: 70vh;
+  }
+  .mainContainer {
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1332px) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .left {
+      width: 39%;
+      border: 1px solid cadetblue;
+      padding-top: 40px;
+      @media screen and (max-width: 1332px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+
+        .job {
+          @include text(('Poppins', sans-serif), $miniTitleTextColor, 22px, 500);
+          margin-bottom: 25px;
+          margin-left: 55px;
+          position: relative;
+
+          &:before {
+            background-image: linear-gradient(
+                            90deg, white 0%, white 100%), linear-gradient(
+                            90deg, white 0%, white 100%), radial-gradient(ellipse at center, #ffc514 0%, #ffc514 50%, rgba(255, 197, 20, 0) 50%, rgba(255, 197, 20, 0) 100%);
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -55px;
+            box-sizing: border-box;
+            background-size: 20px 2px, 7px 2px, 7px 7px;
+            background-position: 0 50%, 27px 50%, 43px 50%;
+            width: 51px;
+          }
+        }
+
+        .name {
+          .white {
+            color: white;
+          }
+
+          @include text(('Poppins', sans-serif), $titleColor, 54px, 700, 1.2);
+        }
+      }
+
+      .description {
+        @include text(('Poppins', sans-serif), #cfcfcf, 1rem, 500, 1.75);
+      }
+    }
+
+    .right {
+      width: 35%;
+      text-align: right;
+      padding-left: 200px;
+      padding-top: 40px;
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      top: 0;
+      margin-right: 70px;
+      .image {
+        position: relative;
+
+        .img {
+          min-width: 100%;
+          position: relative;
+          opacity: 0;
+        }
+
+        .main {
+
+          transform: rotate(
+                          7deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-size: cover;
+
+          z-index: 2;
+          border-radius: 10px;
+          transition: all .4s ease;
+        }
+
+        .shape {
+          position: absolute;
+          top: 23px;
+          bottom: -23px;
+          left: -95px;
+          width: 90%;
+          background-color:$titleColor;
+          transform: rotate(
+                          -6deg);
+          z-index: 1;
+          border-radius: 10px;
+          transition: all .4s ease;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
