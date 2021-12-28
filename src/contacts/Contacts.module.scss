@@ -1,7 +1,7 @@
 @import '../common/styles/sass/variables.module';
 
 .contactsBlock {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: $blockItemColor;
   padding-bottom: 65px;
   @media screen and (max-width: 1100px) {
