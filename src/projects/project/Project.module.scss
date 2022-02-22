@@ -2,7 +2,7 @@
 @import '../../common/styles/sass/mixins';
 .project {
   width: 325px;
-  min-height: 422px;
+  min-height: 394px;
   background-color: $blockItemColor;
   display: flex;
   flex-direction: column;
@@ -20,12 +20,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7f19ce;
+    //background-color: #7f19ce;
     height: 213px;
     position: relative;
     border-radius: 3px 3px 0 0;
     width: 100%;
-
+    background-size: cover;
+background-position: right;
     .button {
       border-radius: 6px;
       background: linear-gradient(
@@ -52,7 +53,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0;
+      opacity: 0.2;
     }
     &::after {
       position: absolute;
@@ -77,7 +78,6 @@
       /*margin: 0px 0px 0px 10px;*/
       @include text(('Poppins',sans-serif), $miniTitleTextColor, 1rem,300,1.75);
       margin-top: 0;
-      margin-bottom: 1rem;
     }
   }
 }

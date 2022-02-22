@@ -4,8 +4,8 @@ import s from './Project.module.scss'
 export function Project(props: any){
     return (
         <div className={s.project}>
-            <div className={s.imgContainer}>
-                <a className={s.button}href="">
+            <div style={props.style} className={s.imgContainer}>
+                <a className={s.button} href={'https://vihareva.github.io/' + props.path}>
                     <span className={s.textLink}>view</span>
                 </a>
             </div>

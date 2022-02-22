@@ -5,10 +5,11 @@ import cs from '../common/styles/Container.module.css'
 import {Title} from "../common/components/title/Title";
 import './Contacts.module.scss'
 import {ContactInput} from "./ContactInput";
+import {Bounce} from "react-awesome-reveal";
 
 export function Contacts() {
 
-    const sendEmail = (e:any) => {
+    const sendEmail = (e: any) => {
         init("user_SP3LKH0PLFGcFhLblY1QY");
         e.preventDefault();
 
@@ -23,11 +24,11 @@ export function Contacts() {
     };
 
     return (
-        <div className={style.contactsBlock}>
+        <div id={'contacts'} className={style.contactsBlock}>
             <div className={`${cs.container} ${style.contactsContainer}`}>
                 <Title smallText={'Any Question?'} text={'Drop Me A Line'}/>
                 <div className={style.formContainer}>
-                    <form  onSubmit={sendEmail}  className={style.form}>
+                    <form onSubmit={sendEmail} className={style.form}>
                         <div className={style.flex}>
                             <div className={style.container}>
                                 <ContactInput text={'Name'} name={'name'}/>
@@ -39,11 +40,15 @@ export function Contacts() {
                             </div>
                         </div>
                         <ContactInput text={'Message'} name={'message'}/>
-                        {/*<div className={s.button}>*/}
-                        <button className={style.submitButton} type='submit'>
-                            <span className={style.textLink}>Send Message</span>
-                        </button>
-                        {/*</div>*/}
+
+                        <div>
+                            <Bounce triggerOnce delay={1000} duration={1600}>
+                                <button className={style.submitButton} type='submit'>
+                                    <span className={style.textLink}>Send Message</span>
+                                </button>
+                            </Bounce>
+                        </div>
+
                     </form>
                 </div>
             </div>

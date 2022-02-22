@@ -2,9 +2,16 @@
 
 
 .projectsBlock {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #111111;
   padding-bottom: 65px;
+  .particles{
+    position: absolute;
+    left: 0; right: 0; /* Вся ширина */
+    top: 0;
+    bottom: 0;
+    opacity: 0.3;
+  }
   .projectsContainer {
     flex-direction: column;
     justify-content: flex-start;
@@ -14,7 +21,7 @@
       margin-top: 50px;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       @media screen and (max-width: 1332px) {
         justify-content: space-evenly;

@@ -11,6 +11,9 @@
         display: block;
         text-decoration: none;
         background-color: transparent;
+        @media screen and (max-width: 820px){
+           font-size:12px;
+        }
         &:after{
             transition: opacity, .3s ease, visibility .3s ease, transform .3s ease, -webkit-transform .3s ease;
             opacity: 0;
@@ -26,6 +29,7 @@
             left: 0;
             background-color: $titleColor;
             box-sizing: border-box;
+
         }
         &:hover::after, &:focus::after{
             opacity: 1;
@@ -33,10 +37,25 @@
         &:hover, &:focus{
             color: $titleColor;
             transition: color .3s ease;
+            cursor: pointer;
         }
     }
-    .clicked{
+    .active {
+        position: relative;
         font-weight: 700;
+        color: $titleColor;
+        display: block;
+        &:after {
+            border-radius: 9px;
+            width: 15px;
+            height: 3px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $titleColor;
+            box-sizing: border-box;
+            opacity:1;
+        }
     }
-
 }

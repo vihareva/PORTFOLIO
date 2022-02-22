@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import s from './MenuNavLink.module.scss'
+import {Link} from "react-scroll/modules";
 
 type LinkProps={
     path: string
@@ -7,17 +8,23 @@ type LinkProps={
 }
 export function MenuNavLink(props: LinkProps) {
 
-    const [linkClicked, setLinkClicked]=useState<boolean>(false)
-    const onClickHandler=()=>{
-        setLinkClicked(true)
-    }
-
     return  <li className={s.li}>
-        <a onClick={onClickHandler}
-              className={linkClicked? `${s.clicked} ${s.link} `: s.link}
-              href={props.path}>
-        {props.linkName}
-    </a>
+        {/*<a  className={s.link}*/}
+        {/*    // className={linkClicked? `${s.clicked} ${s.link} `: s.link}*/}
+        {/*      href={props.path}>*/}
+            <Link
+
+                to={props.path}
+                spy={true}
+                smooth={true}
+                offset={-58}
+                duration={700}
+                className={s.link}
+                activeClass={s.active}
+            >
+                {props.linkName}
+            </Link>
+    {/*</a>*/}
     </li>
 
 }

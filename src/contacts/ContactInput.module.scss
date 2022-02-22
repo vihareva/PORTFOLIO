@@ -60,3 +60,8 @@
   text-align: left;
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
+
+.input:-webkit-autofill{
+  -webkit-text-fill-color: $miniTitleTextColor;
+  -webkit-box-shadow: 0 0 0 1000px  $blockItemColor inset;
+}

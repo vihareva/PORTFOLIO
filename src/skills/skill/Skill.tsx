@@ -3,6 +3,7 @@ import s from './Skill.module.scss'
 
 export function Skill(props: any) {
     return (
+
         <div className={s.skill}>
             <span className={s.iconContainer}>
                     <span className={s.img} style={props.style}></span>

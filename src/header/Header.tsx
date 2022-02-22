@@ -5,16 +5,17 @@ import {MenuNavLink} from "./nav-menu/MenuNavLink";
 
 export function Header() {
     const links=[
-        {linkName: 'Home', path: ''},
-        {linkName:'Skills', path: ''},
-        {linkName:'Projects', path: ''},
-        {linkName:'Contacts', path: ''}
+        {linkName: 'Home', path: 'home'},
+        {linkName:'Projects', path: 'projects'},
+        {linkName:'Skills', path: 'skills'},
+        {linkName:'Contacts', path: 'contacts'}
     ]
 
     return (
         <div className={s.header}>
-            <div className={`${cs.container} ${s.container}`}>
-                <div className={s.navMenu}>
+
+            <div className={` ${s.container}`}>
+                {/*<div className={s.navMenu}>*/}
                     <ul className={s.navBar}>
                         {links
                             .map(l=>{return (
@@ -23,7 +24,7 @@ export function Header() {
                         }
                     </ul>
 
-                </div>
+                {/*</div>*/}
             </div>
 
         </div>

@@ -7,6 +7,7 @@ import tsimg from '../assets/images/ts.jpg';
 import reactimg from '../assets/images/react.jpg';
 import reduximg from '../assets/images/redux.jpg';
 import cssimg from '../assets/images/htmlcss.jpg';
+import {Fade} from "react-awesome-reveal";
 
 export function Skills() {
     const typescript={
@@ -23,16 +24,19 @@ export function Skills() {
     }
 
     return (
-        <div className={s.skillsBlock}>
+        <div id={'skills'}className={s.skillsBlock}>
             <div className={`${cs.container} ${s.skillsContainer}`}>
 
                 <Title smallText={'Skills'} text={'Programming Skills'}/>
                 <div className={s.skills}>
-                    <Skill style ={typescript} title={'Typescript'} description={'dfghj sdfghj awsedrftgyhuji sdf asdf asdfgh'}/>
-                    <Skill style ={css} title={'HTML&CSS'} description={'ASDFGH ASDF SDDFG dfgh sd'}/>
-                    <Skill style ={redux} title={'Redux'} description={'ASDFGH AggggggggggggSDF SDDFG dfgh sd'}/>
-                    <Skill style ={react} title={'React'}
-                           description={'sdfghjkl qwertyujbvsweff fffffffffff ffffffffffff fffffffff ffffrt sdf sd sdfg sdfghj d'}/>
+                    <Fade triggerOnce direction={"up"} duration={1000} delay={500} cascade>
+                     <Skill style ={react} title={'React'}
+                           description={'Functional and Class components, React Router, Material UI, Hooks, HOCs,' +
+                           ' Jest and Storybook'}/>
+                        <Skill style ={redux} title={'Redux'} description={'Redux Thunk, Redux Toolkit, Redux Saga'}/>
+                        <Skill style ={typescript} title={'Typescript'} description={'Javascript ES6+, Generic Types, Union Types and Intersection Types'}/>
+                        <Skill style ={css} title={'HTML&CSS'} description={'adaptive and responsive design, SCSS/SASS'}/>
+                    </Fade>
                 </div>
             </div>
 

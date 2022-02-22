@@ -17,7 +17,7 @@
 
     .formContainer {
       margin-top: 50px;
-      border: 1px solid black;
+
       display: flex;
       box-sizing: border-box;
       flex-wrap: wrap;
@@ -54,7 +54,7 @@
           &:focus, &:hover {
             cursor: pointer;
             background-color: $titleColor;
-            transition: color .8s ease, background-color .8s ease, border-color .8s ease;
+            transition: color .8s ease-in-out, background-color .8s ease-in-out, border-color .8s ease-in-out;
             .textLink {
               color: white;
             }

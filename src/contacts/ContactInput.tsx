@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './ContactInput.module.scss'
+import {Bounce} from "react-awesome-reveal";
 type StatusType='idle'|'succeeded'|'failed'
 
 export function ContactInput(props: any) {
@@ -19,12 +20,17 @@ export function ContactInput(props: any) {
         (editMode==='succeeded' ? s.editedInput : editMode==='failed'? s.error: '');
 
     return (
-        <div className={s.divContainer}>
-            <div className={s.inputContainer}>
-                <input value={text} type="text" onBlur={onBlurHandler}
-                       className={inputFullClassName} onChange={getValue} name={props.name}/>
-                <label className={s.label} htmlFor="">{props.text}</label>
-            </div>
-        </div>
+        <div>
+            <Bounce triggerOnce delay={800} duration={1500}>
+                <div className={s.divContainer}>
+                    <div className={s.inputContainer}>
+                        <input value={text} type="text" onBlur={onBlurHandler}
+                               className={inputFullClassName} onChange={getValue} name={props.name}/>
+                        <label className={s.label} htmlFor="">{props.text}</label>
+                    </div>
+                </div>
+            </Bounce>
+         </div>
+
     );
 }

@@ -1,6 +1,10 @@
 @import '../../../common/styles/sass/mixins';
 @import '../../../common/styles/sass/variables.module';
 
+.miniTitleContainer{
+  margin-top:65px;
+  margin-bottom: 16px;
+}
 .miniTitle{
   @include text(('Poppins',sans-serif),$miniTitleTextColor,18px,500);
   margin-bottom: 16px;
@@ -42,6 +46,10 @@
 .title{
   margin: 0 0 20px;
   @include text(('Poppins',sans-serif),$titleColor,1.875rem,700,1.2);
+  @media screen and (max-width: 432px){
+    font-size: 1.4rem;
+  }
+
   /*display: inline-block;*/
   /*vertical-align: top;*/
   /*text-align: center;*/
